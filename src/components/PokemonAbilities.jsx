@@ -2,20 +2,16 @@
 
 import React, {Component} from 'react';
 
+// CSS
+import '../css/PokemonAbilities.css';
+
 /**
  *
  */
 class PokemonAbilities extends Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-          abilities: props.abilities || [],
-          selectedAbilities: []
-      }
-  }
 
   renderSelectedAbilities() {
-    return this.state.selectedAbilities.map((selectedAbility) => {
+    return this.props.selectedAbilities.map((selectedAbility) => {
       return (
         <li>
           {selectedAbility}
@@ -24,33 +20,30 @@ class PokemonAbilities extends Component {
     });
   }
 
-  setSelected(ability) {
-    this.state.selectedAbilities.push(ability);
-    this.setState({
-      selectedAbilities: this.state.selectedAbilities
-    });
-  }
-
   renderAbilitiesList() {
-    return this.state.abilities.map((ability) => {
-        return !this.state.selectedAbilities.includes(ability.name)
-        ?
-        <li onClick={() => this.setSelected(ability.name)}>
-          {ability.name}
-        </li>
-        : null
+    return this.props.abilities.map((ability) => {
+      return !this.props.selectedAbilities.includes(ability.name)
+      ?
+      <li onClick={() => {
+          this.props.setAblities(ability.name);
+      }}>
+        {ability.name}
+      </li>
+      : null
     });
   }
 
   render() {
     return (
-      <div>
-        <ul>
+      <div id="container-abilities">
+        <h4>Your attacks</h4>
+        <ul className="abilities">
           {
             this.renderSelectedAbilities()
           }
         </ul>
-        <ul>
+        <h4>Select your attack</h4>
+        <ul className="abilities">
           {
             this.renderAbilitiesList()
           }

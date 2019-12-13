@@ -1,0 +1,12 @@
+#container-abilities {
+  width: 45%;
+  float: left;
+}
+
+#container-abilities .abilities {
+  padding: 0;
+}
+#container-abilities .abilities li {
+  color: #3A5D9F;
+  list-style: none;
+}

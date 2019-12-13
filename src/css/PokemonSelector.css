@@ -1,0 +1,9 @@
+#container-selector {
+  width: 100%;
+}
+
+#container-detail {
+  width: 70%;
+  margin-left: 20px;
+  float: left;
+}

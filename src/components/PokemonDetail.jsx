@@ -1,6 +1,6 @@
 // ./assets/js/components/PokemonDetail.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 
@@ -8,38 +8,58 @@ import { useQuery } from '@apollo/react-hooks';
 import PokemonStats from './PokemonStats';
 import PokemonAbilities from './PokemonAbilities';
 
+// CSS
+import '../css/PokemonDetail.css';
+
 const GET_POKEMON = gql`
 query Pokemon($name: String!) {
   Pokemon(name: $name) {
     name,
     abilities{name},
     image,
+    types{name},
     stats{name, value}
   }
 }
 `;
+
 /**
 *
 */
 function PokemonDetail(props) {
+  const [abilities, setAblities] = useState([]);
   const name = props.name;
   const { loading, error, data } = useQuery(GET_POKEMON, {
     variables: { name },
   });
   return (
-    <div>
+    <div id="container-detail">
       {
         (loading || !data || error)
         ?
         null
         :
         <div>
-          <div>
+          <div id="container-info">
             <img src={data.Pokemon.image} alt="pokemon" />
-            <p>{data.Pokemon.name}</p>
+            <h2>{data.Pokemon.name}</h2>
+            <button onClick={() => {
+                setAblities([])
+                props.handleSubmit(data.Pokemon, abilities);
+            }}>
+                Add to team
+            </button>
           </div>
           <PokemonStats stats={data.Pokemon.stats}/>
-          <PokemonAbilities abilities={data.Pokemon.abilities}/>
+          <PokemonAbilities
+            abilities={data.Pokemon.abilities}
+            selectedAbilities={abilities}
+            setAblities={(ability) => {
+              console.log(ability);
+              abilities.push(ability);
+              setAblities([...abilities]);
+            }}
+          />
         </div>
       }
     </div>

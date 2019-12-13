@@ -1,0 +1,22 @@
+#container-stats {
+  width: 30%;
+  float: left;
+}
+
+#container-stats ul {
+  padding: 0;
+}
+
+#container-stats li {
+  list-style: none;
+}
+
+#container-stats p  {
+  color: #FDCC07;
+  text-transform: uppercase;
+}
+
+#container-stats span {
+  color: #3A5D9F;
+  font-size: 35px;
+}

@@ -1,0 +1,30 @@
+#container-list {
+  width: 25%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+#container-list ul {
+  height: 200px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#container-list label {
+  color: #FDCC07;
+}
+
+#container-list input {
+  border: 3px #3A5D9F solid;
+}
+
+#container-list li {
+  font-weight: bold;
+  list-style: none;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 10px 0px;
+}

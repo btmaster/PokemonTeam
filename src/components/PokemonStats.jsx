@@ -2,13 +2,15 @@
 
 import React from 'react';
 
+// CSS
+import '../css/PokemonStats.css';
 
 function renderStats(stats) {
   return stats.map((stat) => {
     return (
       <li>
         <p>
-          {stat.name} {stat.value}
+          {stat.name} <span>{stat.value}</span>
         </p>
       </li>
     )
@@ -20,7 +22,7 @@ function renderStats(stats) {
  */
 function PokemonStats(props) {
   return (
-    <div>
+    <div id="container-stats">
       <h2>Stats</h2>
       <ul>
         {

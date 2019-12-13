@@ -1,0 +1,31 @@
+.pokemon-team {
+  width: 100%;
+  display: flex;
+}
+
+.detail-team {
+  width: 15%;
+  min-height: 200px;
+  margin-right: 10px;
+}
+
+.detail-team {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.detail-team ul {
+  padding: 0;
+}
+
+.detail-team li {
+  border-radius: 5px;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  color: black;
+  font-size: 10px;
+  padding: 2px;
+  margin: 15px;
+}
