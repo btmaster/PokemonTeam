@@ -16,7 +16,7 @@ query {
 }
 `
 
-const PokemonList = () => (
+const PokemonList = (props) => (
   <Query query={GET_POKEMONS}>
     {({ loading, error, data }) => {
       if (loading) return <Loading/>;
@@ -24,7 +24,7 @@ const PokemonList = () => (
         return (
           <Downshift
             onChange={selection => {
-              if (selection && selection.name) this.props.onSelectPokemon(selection.name);
+              if (selection && selection.name) props.onSelectPokemon(selection.name);
             }}
             itemToString={item => (item ? item.value : '')}
             >

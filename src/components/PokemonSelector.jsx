@@ -1,4 +1,4 @@
-// ./assets/js/components/Todos.js
+// ./assets/js/components/PokemonSelector.js
 
 import React, {Component} from 'react';
 
@@ -28,8 +28,13 @@ class PokemonSelector extends Component {
         return (
             <div>
                 <div className="pokemon-selector">
-                  <PokemonList onSelectPokemon={(name) => this.setState({selectedPokemonId: name})}/>
-                  <PokemonDetail id={this.state.selectedPokemonId} onSubmit={() => this.handleSubmit()}/>
+                  <PokemonList onSelectPokemon={(name) => this.setState({selectedPokemonName: name})}/>
+                  {
+                    this.state.selectedPokemonName
+                    ?
+                    <PokemonDetail name={this.state.selectedPokemonName} onSubmit={() => this.handleSubmit()}/>
+                    : null
+                  }
                 </div>
                 <PokemonTeam />
             </div>
