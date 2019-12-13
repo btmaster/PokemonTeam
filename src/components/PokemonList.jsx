@@ -1,5 +1,3 @@
-// ./assets/js/common/PokemonList.jsx
-
 import React from 'react';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';

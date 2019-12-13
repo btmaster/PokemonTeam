@@ -1,5 +1,3 @@
-// ./assets/js/components/PokemonTeam.js
-
 import React, {Component} from 'react';
 
 // CSS

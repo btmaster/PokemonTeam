@@ -21,7 +21,6 @@ query Pokemon($name: String!) {
 }
 `;
 
-
 /**
  * The detail of the pokemon
  *

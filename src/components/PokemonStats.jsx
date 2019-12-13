@@ -1,5 +1,3 @@
-// ./assets/js/components/PokemonStats.jsx
-
 import React from 'react';
 
 // CSS
@@ -16,7 +14,6 @@ function renderStats(stats) {
     )
   });
 }
-
 
 /**
  * Overview of the stats of the pokemon
