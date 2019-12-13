@@ -26,9 +26,11 @@ const types = {
   "fairy": "#D685AD",
 };
 
+
 /**
-*
-*/
+ * Your selected team of pokemons
+ *
+ */
 class PokemonTeam extends Component {
 
   renderAbilities(abilities) {

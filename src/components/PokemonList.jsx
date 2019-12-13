@@ -20,6 +20,10 @@ query {
 }
 `
 
+/**
+ * Overview list of the pokemons where you can search
+ *
+ */
 const PokemonList = (props) => (
   <div id="container-list">
     <Query query={GET_POKEMONS}>

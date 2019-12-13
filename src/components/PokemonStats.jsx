@@ -17,7 +17,9 @@ function renderStats(stats) {
   });
 }
 
+
 /**
+ * Overview of the stats of the pokemon
  *
  */
 function PokemonStats(props) {

@@ -1,5 +1,3 @@
-// ./assets/js/components/PokemonDetail.jsx
-
 import React, { useState } from 'react';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
@@ -23,9 +21,11 @@ query Pokemon($name: String!) {
 }
 `;
 
+
 /**
-*
-*/
+ * The detail of the pokemon
+ *
+ */
 function PokemonDetail(props) {
   const [abilities, setAblities] = useState([]);
   const name = props.name;

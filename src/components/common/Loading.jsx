@@ -1,5 +1,3 @@
-// ./assets/js/common/Loading.jsx
-
 import React from 'react';
 
 /**

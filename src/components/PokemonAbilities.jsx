@@ -1,11 +1,11 @@
-// ./assets/js/components/Todos.js
-
 import React, {Component} from 'react';
 
 // CSS
 import '../css/PokemonAbilities.css';
 
+
 /**
+ * Pokemon abilities where you can select your attacks
  *
  */
 class PokemonAbilities extends Component {

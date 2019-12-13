@@ -1,5 +1,3 @@
-// ./assets/js/components/PokemonSelector.js
-
 import React, {Component} from 'react';
 import Swal from 'sweetalert2';
 
@@ -11,7 +9,9 @@ import PokemonList from './PokemonList';
 import PokemonDetail from './PokemonDetail';
 import PokemonTeam from './PokemonTeam';
 
+
 /**
+ * The overview where you can select the pokemons
  *
  */
 class PokemonSelector extends Component {
